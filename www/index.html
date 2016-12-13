@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    </head>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+        function log(msg){
+            console.log(msg);
+            document.body.innerHTML += '<p>'+msg+'</p>';
+        }
+
+        function onReady(){
+            log("deviceready");
+            try{
+                cordova.plugins.diagnostic.isLocationEnabled(function(enabled) {
+                    log("Location enabled: " + enabled);
+                }, function(error) {
+                    log("A plugin error occurred: "+error);
+                });
+            }catch(e){
+                log("An exception occurred: "+ e.message);
+            }
+        }
+        document.addEventListener("deviceready", onReady, false);
+    </script>
+    <body></body>
+</html>
