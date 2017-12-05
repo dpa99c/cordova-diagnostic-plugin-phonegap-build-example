@@ -17,16 +17,16 @@
     <access origin="*" />
 
     <preference name="Fullscreen" value="false" />
-    <preference name="phonegap-version" value="cli-6.4.0" /> <!-- Phonegap Build only -->
+    
+    <!-- Phonegap Build only -->
+    <preference name="phonegap-version" value="cli-7.0.1" /> 
 
     <plugin name="cordova-plugin-whitelist" version="*" />
 
     <plugin name="cordova.plugins.diagnostic" version="*" />
 
+	<engine name="android" spec="^7.0.0" />
     <platform name="android">
-        <preference name="android-minSdkVersion" value="21" />
-        <preference name="android-targetSdkVersion" value="25" />
-
         <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
         <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
         <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
