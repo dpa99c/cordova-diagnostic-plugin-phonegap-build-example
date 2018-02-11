@@ -19,7 +19,7 @@
     <preference name="Fullscreen" value="false" />
     
     <!-- Phonegap Build only -->
-    <preference name="phonegap-version" value="cli-7.0.1" /> 
+    <preference name="phonegap-version" value="cli-8.0.0" /> 
 
     <plugin name="cordova-plugin-whitelist" version="*" />
 
